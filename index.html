@@ -1,0 +1,355 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina|Pacifico|Righteous" rel="stylesheet">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
+ <script src='myscript.js'></script>
+ 
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<meta name="google-signin-client_id" content="497563783013-hrfidv6l3td5pq13g82d344dc9be7522.apps.googleusercontent.com">
+<script>
+	
+	function openNav() {
+	
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("lol").style.marginRight = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+$(document).ready(function (e){
+    
+    
+
+  if (localStorage.getItem("name") === null) {
+  document.location.href="login.php";
+}});
+
+/* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("lol").style.marginRight = "0";
+    document.body.style.backgroundColor = "white";
+} 
+
+function scrollvote() {
+   $('html, body').animate({
+    scrollTop: $("#lol").offset().top
+}, 1000);
+
+}
+function scrolltop() {
+   $('html, body').animate({
+    scrollTop: $("#top_profiles").offset().top
+}, 1000);
+}
+
+function scrollupload() {
+   $('html, body').animate({
+    scrollTop: $("#upload_profile").offset().top
+}, 1000);
+}
+
+</script>
+<style>
+
+
+#square {
+    background-color:#49c3b6;
+    clear:both;
+    height:100px;
+    width:102%;
+}
+#square2 {
+    background-color:#3330;
+    clear:both;
+    height:40px;
+    width:100%;
+}
+.col-sm-4{
+text-align:center;
+border-radius: 20px;
+height:500px; background:#d5d5d5;box-shadow: 0px 2px 10px #6f6f6f;
+}
+.col-sm-4:hover{
+box-shadow: 0px 2px 20px #6f6f6f;
+}
+#card{
+margin:10px;height:340px;background:white;
+box-shadow: 0px 2px 5px #6f6f6f;
+}
+#card:hover{
+box-shadow: 0px 2px 20px #6f6f6f;
+}
+#head{
+position: fixed;
+top:0;
+width: 100%;
+
+box-shadow:0px 4px 10px #333;
+z-index: 10;
+
+}
+#footer{
+position: absolute;
+top:0;
+width: 100%;
+z-index: 10;
+
+}
+
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 12; /* Stay on top */
+    top: 0;
+    right: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#lol {
+    transition: margin-right .5s;
+    
+	background:#fff;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+
+</style>
+
+
+
+</head>
+
+<body class="body">
+
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="javascript:void(0)" onclick="return scrollvote();">Vote</a>
+  <a href="javascript:void(0)" onclick="return scrolltop();"href="#">Top Profiles</a>
+  <a href="profiles.php">All Profiles</a>
+  <a href="javascript:void(0)" onclick="return scrollupload();"href="#">Upload</a>
+</div>
+
+
+<div id="lol">
+<div class="container_big" style="margin-top: 100px;">
+
+<header id="head" style="position:fixed;background:#fff">
+<div class="row" id="square">
+<img style="height:120px;margin-left:40px;display: inline-block;" src ="logo.png">
+<h2   style="display: inline-block;font-family: 'Pacifico', cursive; color:#fff">Facemash.</h2>
+<img src="menu.png" style="display:inline-block;position: fixed;top: 30px;   right: 30px; width:50px;height:50px" onClick="return openNav();"></img>
+</div></div>
+</header>
+
+
+
+<center>
+<div id = "loader-two-random" style="margin-top:280px;margin-bottom:200px">
+
+
+<img id = "myImage" src = "form-loader.gif" height="150px" width="200px">
+</div><br>
+</center>
+
+
+<div id="upper_card" class = "row" style="margin-top:20px">
+
+<div class="col-sm-1" ></div>
+<div class="col-sm-4" id="big_card1">
+<div>
+<img src ="heart.png" id ="heart1" style="position:absolute; width:350px;height:350px;margin-left: 35px;margin-top: 20px;">
+<img id="image1" src="sunny.jpg" style="width:93%;margin: 10px; height:400px">
+<div class="row">
+
+<div class="col-sm-3"><img src="heart.png" style="margin-top: 18px;display:inline-block;height:30px;width:30px;"><h4 id="like1" style="margin-top: 24px;position: absolute;margin-left: 10px;display:inline-block;">55</h4></div>
+<div class="col-sm-6"><h3 id="name1">Sunny Narang</h3></div>
+<div class="col-sm-3" style="display: -webkit-box;"><img src="view.png" style="margin-top: 18px;display:inline-block;height:30px;width:30px;"><h4 id="seen1" style="margin-top: 24px;position: absolute;margin-left: 10px;display:inline-block;">55</h4></div>
+
+
+</div>
+</div>
+
+</div>
+<div class="col-sm-2" style="height: 100px;margin-top: 150;text-align: center;"> <img src="vs.png" style="height:100px">	</div>
+<div class="col-sm-4" id="big_card2">
+
+
+<div>
+
+<img src ="heart.png" id ="heart2" style="position:absolute; width:350px;height:350px;margin-left: 35px;margin-top: 20px;">
+<img id="image2" src="sunny.jpg" style="width:93%;margin: 10px; height:400px">
+<div class="row">
+
+<div class="col-sm-3"><img src="heart.png" style="margin-top: 18px;display:inline-block;height:30px;width:30px;"><h4 id="like2"style="margin-top: 24px;position: absolute;margin-left: 10px;display:inline-block;">55</h4></div>
+<div class="col-sm-6"><h3 id="name2">Sunny Narang</h3></div>
+<div class="col-sm-3" style="display: -webkit-box;"><img  src="view.png" style="margin-top: 18px;display:inline-block;height:30px;width:30px;"><h4 id="seen2"style="margin-top: 24px;position: absolute;margin-left: 10px;display:inline-block;">55</h4></div>
+
+
+</div>
+</div>
+</div>
+<div class="col-sm-1"></div>
+
+</div>
+
+
+
+
+
+<div id="top_profiles" class="row" style="margin-top: 100px; background:#49c3b6;color: #fff;">
+<div class="col-sm-3" style="margin-left: 60px;margin-top: 80px;margin-right: 80px;">
+<h2 style="font-family: 'Baloo Bhaina', cursive;"><center>TOP <br>Three<br> Profiles<center></h2>
+<center><a href="profiles.php"><button class="btn btn-primary btn-lg">See All</button></a></center>
+</div>
+
+
+
+
+
+<div class="col-sm-2" id="card">
+<img id="topimage1" src="sunny.jpg" style="height: 250px;width: 100%;margin-top: 10px;">
+
+
+<center><h4 id="topname1" style="color:black">Sunny Narang</h4></center>
+
+<div class="score" style="margin-left: 65px;">
+
+<img src="heart.png" style="display:inline-block;height:30px;width:30px;">
+<h4 id="toplike1" style="color:black;position: absolute;margin-left: 10px;display:inline-block;">55</h4>
+</div>
+
+
+</div>
+<div class="col-sm-2" id="card">
+<img id="topimage2" src="sunny.jpg" style="height: 250px;width: 100%;margin-top: 10px;">
+
+
+<center><h4 id="topname2"style="color:black">Sunny Narang</h4></center>
+
+<div class="score" style="margin-left: 65px;">
+
+<img src="heart.png" style="display:inline-block;height:30px;width:30px;">
+<h4 id="toplike2" style="color:black;position: absolute;margin-left: 10px;display:inline-block;">55</h4>
+</div></div>
+<div class="col-sm-2" id="card">
+<img id="topimage3" src="sunny.jpg" style="height: 250px;width: 100%;margin-top: 10px;">
+
+
+<center><h4 id="topname3" style="color:black">Sunny Narang</h4></center>
+
+<div class="score" style="margin-left: 65px;">
+
+<img src="heart.png" style="display:inline-block;height:30px;width:30px;">
+<h4 id="toplike3" style="color:black;position: absolute;margin-left: 10px;display:inline-block;">55</h4>
+</div></div>
+
+
+
+
+
+
+
+</div>
+
+
+<div id="upload_profile" class="row" style="margin-top:70px;background:#2e8379 ;width:100%;height:300px;margin-bottom:20px">
+
+<div class="col-sm-7">
+
+
+<form id="uploadimage" action="upload.php" style="padding:20px;" method="post" enctype="multipart/form-data">
+
+<div class="name" style="margin-left: 75px;margin-top: 50px;"><h3 style=" margin-left:30px;color:white;display:inline-block;">Name:</h3><input name="name" id="name" style="margin-left:30px;display:inline-block; width:60%" type="text" class="form-control" id="email" placeholder="Enter Name">
+</div>
+
+
+<div class="image" style="margin-left:75px"><h3 style=" margin-left:30px;color:white;display:inline-block;">Image:</h3><input style="margin-left:30px;display:inline-block; width:60%" type="file"  name="fileToUpload" id="fileToUpload" placeholder="Enter Name">
+</div>
+
+<center><input type="submit" value="Upload" class="btn btn-primary" id="registerform" name="submit"></center>
+
+</form>
+
+<center><p id="message"style="color:white"></p></center>
+
+
+</div>
+
+
+<div class="col-sm-5" style="color:#fff">
+<h1 class="col-sm-3" style="margin-left: 130px;margin-top: 95px;margin-right: 80px;font-family: 'Baloo Bhaina', cursive;"><center>Upload <br>Your<br> Profile<center></h1>
+</div>
+
+</div>
+
+<center><img  id='formloader' style="margin-bottom:20px;height:150px; " src='form-loader.gif'/>
+</center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+<footer style="height: 30px;">
+
+<div style="text-align:center" id="square2">
+<h4   style="display: inline-block;font-family: 'Pacifico', cursive; color:#444">Handcrafted By: <a href="https://www.facebook.com/sunny.narang.9847">Sunny Narang</a><br></h4></div></div>
+</footer>
+
+</div>
+
+</body>
+
+</html>
